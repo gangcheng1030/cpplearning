@@ -23,8 +23,14 @@ void show_pointer(void *x) {
 }
 
 int main() {
-    int x = 12345;
-    show_int(x);
-    int *p = &x;
-    show_pointer(p);
+//    int x = 12345;
+//    show_int(x);
+//    int *p = &x;
+//    show_pointer(p);
+
+    short sx = -12345;
+    unsigned uy = sx;
+    printf("uy = %u:\t", uy);
+    show_bytes((byte_pointer) &uy, sizeof(unsigned));
+    return 0;
 }
